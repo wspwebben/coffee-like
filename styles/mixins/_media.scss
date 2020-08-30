@@ -1,0 +1,27 @@
+@use '../variables';
+
+@mixin media($screen, $direction: 'from') {
+  @if ($direction != 'from' and $direction != 'to') {
+    @error 'Direction is wrong';
+  }
+ 
+  $screen-size: $screen;
+
+  @if (type-of($screen) == string) {
+    @if (map-get(variables.$screens, $screen)) {
+      $screen-size: map-get(variables.$screens, $screen)
+    } @else {
+      @error 'Screen is wrong';
+    }
+  }
+
+  @if ($direction == 'from') {
+    @media (min-width: $screen-size) {
+      @content;
+    }
+  } @else {
+    @media (max-width: $screen-size - 1) {
+      @content;
+    }
+  }
+}
