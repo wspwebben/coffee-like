@@ -1,3 +1,5 @@
+@use 'sass:map';
+@use 'sass:meta';
 @use '../variables';
 
 @mixin media($screen, $direction: 'from') {
@@ -7,9 +9,9 @@
  
   $screen-size: $screen;
 
-  @if (type-of($screen) == string) {
-    @if (map-get(variables.$screens, $screen)) {
-      $screen-size: map-get(variables.$screens, $screen)
+  @if (meta.type-of($screen) == string) {
+    @if (map.has-key(variables.$screens, $screen)) {
+      $screen-size: map.get(variables.$screens, $screen)
     } @else {
       @error 'Screen is wrong';
     }

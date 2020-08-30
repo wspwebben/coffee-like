@@ -1,0 +1,26 @@
+@use 'sass:map';
+@use 'sass:list';
+@use 'base-colors' as *;
+
+$primary: $dark-green;
+$support: $light-green;
+$text: $black;
+$text-light: rgba($black, 0.5);
+
+$gradient-colors: (
+  'green':  ($green , $dark-green  ),
+  'orange': ($orange, $light-orange),
+  'blue':   ($blue  , $light-blue  ),
+);
+
+@function gradient($color, $degree: 180deg, $stop-1: 0%, $stop-2: 100%) {
+  @if (map.has-key($gradient-colors, $color)) {
+    @error 'Can\'t create gradient for color #{$color}';
+  }
+  
+  $colors: map.get($gradient-colors, $color);
+  $color-1: list.nth($colors, 1);
+  $color-2: list.nth($colors, 2);
+
+  @return linear-gradient($degree, $color-1, $stop-1, $color-2, $stop-2);
+}
