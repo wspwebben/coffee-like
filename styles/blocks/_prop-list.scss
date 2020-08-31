@@ -1,0 +1,50 @@
+@use '../colors';
+
+$bar-color: colors.$support;
+$bar-active-color: colors.$primary;
+
+.prop-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  // gap: 20px;
+
+  &__item {
+    margin-right: 20px;
+    margin-bottom: 20px;
+
+    // even childs
+    &:nth-child(2n) {
+      // margin-right: 0;
+    }
+
+    // two last childs
+    &:nth-last-child(-n + 2) {
+      margin-bottom: 0;
+    }
+  }
+
+  &__value {
+    display: flex;
+    margin: 0;
+    margin-bottom: 6px;
+  }
+
+  &__bar {
+    width: 17px;
+    height: 3px;
+    background-color: $bar-color;
+    border-radius: 2px;
+
+    &--active {
+      background-color: $bar-active-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 3px;
+    }
+  }
+
+  &__label {
+  }
+}

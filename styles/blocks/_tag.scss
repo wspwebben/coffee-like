@@ -1,0 +1,9 @@
+@use '../colors';
+
+$text-color: colors.$text-contrast;
+
+.tag {
+  padding: 5px 10px;
+  background-color: colors.$primary;
+  color: $text-color;
+}

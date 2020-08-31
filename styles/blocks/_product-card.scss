@@ -1,0 +1,83 @@
+@use '../colors';
+
+$border-color: rgba(colors.$primary, 0.1);
+$border-color-hover: colors.$primary;
+$bg-color: rgba(#f1fff9, 0.5);
+
+.product-card {
+  position: relative;
+  padding: 20px;
+  padding-top: 0;
+  border: 1px solid $border-color;
+  background-color: $bg-color;
+  cursor: pointer;
+
+  &:hover {
+    border-color: $border-color-hover;
+  }
+
+  &__header {
+  }
+
+  &__photo {
+    margin-left: 10px;
+    margin-top: -26px;
+    margin-bottom: 23px;
+  }
+
+  &__props {
+    margin: 0;
+  }
+
+  &__tag-list {
+    position: absolute;
+    top: 20px;
+    left: 0;
+  }
+
+  &__tag {
+    
+    &:not(:last-child) {
+      margin-bottom: 5px;
+    }
+  }
+
+  &__feedback {
+  }
+
+  &__rating {
+  }
+
+  &__comments {
+  }
+
+  &__comments-label {
+  }
+
+  &__title {
+  }
+
+  &__link {
+  }
+
+  &__text {
+  }
+
+  &__fields {
+  }
+
+  &__field {
+  }
+
+  &__cart {
+  }
+
+  &__count {
+  }
+
+  &__checkout {
+  }
+
+  &__price {
+  }
+}
