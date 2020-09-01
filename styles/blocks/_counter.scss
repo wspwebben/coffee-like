@@ -1,8 +1,40 @@
 .counter {
+  display: flex;
 
   &__button {
+    $size: 40px;
+    
+    position: relative;
+    min-width: $size;
+    min-height: $size;
+
+    &--minus::before,
+    &--plus::before,
+    &--plus::after {
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      background-color: currentColor;
+      width: 16px;
+      height: 2px;
+
+      transform: translate(-50%, -50%);
+    }
+
+    &--plus::after {
+      transform: translate(-50%, -50%) rotate(90deg);
+    }
   }
 
   &__input {
+    min-width: 0;
+    width: 1ch;
+    box-sizing: content-box;
+    border: 0;
+    padding: 10px;
+    background-color: transparent;
+    font-size: 16px;
+    line-height: 22px;
   }
 }

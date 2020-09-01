@@ -1,0 +1,41 @@
+@use '../colors';
+
+$border-color: rgba(colors.$primary, 0.3);
+$border-hover-color: colors.$primary;
+$arrow-color: rgba(colors.$primary, 0.4);
+$option-color: inherit;
+$option-hover-color: colors.$primary;
+$option-selected-color: colors.$support;
+
+.select {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 9px 0;
+  border: 0;
+  border-bottom: 1px solid $border-color;
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 19px;
+  
+  &:hover,
+  &:focus {
+    border-bottom-color: $border-hover-color;
+    outline: 0;
+  }
+
+  &__option {
+    padding: 9px 15px;
+    color: $option-color;
+    
+    &:hover,
+    &:focus,
+    &:checked {
+      background-color: transparent;
+      color: $option-hover-color
+    }
+
+
+  }
+}

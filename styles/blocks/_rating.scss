@@ -1,8 +1,32 @@
+@use '../colors';
+
+$star-color: colors.$support;
+$star-active-color: colors.$primary;
+
 .rating {
+  display: flex;
+  align-items: center;
 
   &__stars {
+    display: flex;
+    align-items: center;
+    margin-right: 6px;
+  }
+
+  &__star {
+    fill: $star-color;
+
+    &--active {
+      fill: $star-active-color;
+    }
+
+    &:not(:last-child) {
+      margin-right: 2px;
+    }
   }
 
   &__value {
+    font-size: 12px;
+    line-height: 16px;
   }
 }

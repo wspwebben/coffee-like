@@ -25,13 +25,15 @@
 				<li class="product-list__item">
 					<article class="product-list__card product-card">
 						<header class="product-card__header">
-							<img
-								class="product-card__photo"
-								src="https://store.coffee-like.com/cache/b/d/b/1/9/bdb19136eb572b95eaca594e7779f1ee8f296df3.png?1"
-								width="160"
-								height="260"
-								alt="Упаковка кофе 'Бразилия Серрадо'"
-							>
+							<a class="product-card__photo" href="#">
+								<img
+									src="https://store.coffee-like.com/cache/b/d/b/1/9/bdb19136eb572b95eaca594e7779f1ee8f296df3.png?1"
+									width="160"
+									height="260"
+									alt="Упаковка кофе 'Бразилия Серрадо'"
+								>
+							</a>
+
 							<dl class="product-card__props prop-list">
 								<div class="prop-list__item">
 									<dd class="prop-list__value" aria-label="4 из 5" >
@@ -69,10 +71,11 @@
 						<ul class="product-card__tag-list">
 							<li class="product-card__tag tag tag--orange">-20% до конца месяца</li>
 							<li class="product-card__tag tag tag--green">Быстрая доставка</li>
+							<li class="product-card__tag tag tag--blue">Популярный</li>
 						</ul>
 
 						<div class="product-card__feedback">
-							<p class="product-card__rating rating">
+							<div class="product-card__rating rating">
 								<div class="rating__stars">
 									<svg class="rating__star rating__star--active" width="14" height="13">
 										<use href="icons/star.svg"></use>
@@ -92,13 +95,13 @@
 
 								</div>
 								<span class="rating__value">4.0</span>
-							</p>
+							</div>
 
-							<a class="product-card__comments" href="#">
-								<svg class="product-card__comments-icon" width="16" height="16">
+							<a class="product-card__comments comments" href="#">
+								<svg class="comments__icon" width="18" height="16">
 									<use href="icons/comments.svg"></use>
 								</svg>
-								<span class="product-card__comments-label">14 отзывов</span>
+								<span class="comments__label">14 отзывов</span>
 							</a>
 						</div>
 						<h3 class="product-card__title">
@@ -108,29 +111,29 @@
 
 						<div class="product-card__fields">
 							<label class="product-card__field">
-								<span class="field-label">Фасовка</span>
-								<select>
-									<option value="250">250г</option>
+								<span class="product-card__field-label field-label">Фасовка</span>
+								<select class="product-card__select select">
+									<option class="select__option" value="250">250г</option>
 								</select>
 							</label>
 							<label class="product-card__field">
-								<span class="field-label">Помол</span>
-								<select>
-									<option value="beans">В зернах</option>
+								<span class="product-card__field-label field-label">Помол</span>
+								<select class="product-card__select select">
+									<option class="select__option" value="beans">В зернах</option>
 								</select>
 							</label>
 						</div>
 						
 						<footer class="product-card__cart">
 							<div class="product-card__count counter">
-								<button class="counter__button" aria-label="-1" disabled></button>
-								<input class="counter__input" type="text">
-								<button class="counter__button" aria-label="+1"></button>
+								<button class="counter__button counter__button--minus button button--invert button--round" aria-label="-1" disabled></button>
+								<input class="counter__input" type="text" value="1">
+								<button class="counter__button counter__button--plus button button--invert button--round" aria-label="+1"></button>
 							</div>
 
 							<div class="product-card__checkout">
 								<span class="product-card__price">390 ₽</span>
-								<a class="product-card__cart" href="" aria-label="Добавить в корзину">
+								<a class="product-card__submit button button--round" href="" aria-label="Добавить в корзину">
 									<svg class="product-card__cart-icon" width="26" height="22">
 										<use href="icons/cart.svg"></use>
 									</svg>

@@ -1,0 +1,32 @@
+@use '../colors';
+
+$icon-color: colors.$primary;
+$border-color: rgba(colors.$primary, 1);
+$border-hover-color: currentColor;
+
+.comments {
+  $this: &;
+
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &:hover,
+  &:focus {
+    #{$this}__label {
+
+      border-bottom-color: $border-hover-color;
+    }
+  }
+
+  &__icon {
+    margin-right: 8px;
+    fill: $icon-color;
+  }
+
+  &__label {
+    font-size: 12px;
+    line-height: 16px;
+    border-bottom: 1px solid $border-color;
+  }
+}

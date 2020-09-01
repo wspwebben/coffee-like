@@ -1,7 +1,10 @@
-@forward 'blocks/product-list';
-@forward 'blocks/product-card';
-@forward 'blocks/tag';
-@forward 'blocks/prop-list';
-@forward 'blocks/field-label';
-@forward 'blocks/rating';
-@forward 'blocks/counter';
+@use 'blocks/button';
+@use 'blocks/tag';
+@use 'blocks/prop-list';
+@use 'blocks/field-label';
+@use 'blocks/rating';
+@use 'blocks/comments';
+@use 'blocks/select';
+@use 'blocks/counter';
+@use 'blocks/product-list';
+@use 'blocks/product-card';
