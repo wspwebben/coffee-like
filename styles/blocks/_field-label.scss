@@ -1,9 +1,0 @@
-@use '../colors';
-
-$text-color: colors.$text-light;
-
-.field-label {
-  color: $text-color;
-  font-size: 12px;
-  line-height: 16px;
-}
